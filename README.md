@@ -20,7 +20,8 @@
 >> ##### README.md 介绍文件
 
 ## 使用流程
-```flow
+```mermaid
+flowchat
 start=>start: 开始
 end=>end: 结束
 
