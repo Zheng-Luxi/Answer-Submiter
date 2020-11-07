@@ -1,0 +1,132 @@
+@font-face {
+	font-family: "幼圆";
+	src: url(/fonts/幼圆.ttf);
+}
+
+@font-face {
+	font-family: "Consolas";
+	src: url(/fonts/Consolas.ttf);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 100vw;
+	min-height: 100vh;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background-color: #181818;
+}
+
+@media screen and ( min-width: 1200px ) {
+	.container {
+		width: 50%;
+	}
+}
+
+@media screen and ( min-width: 600px ) and ( max-width: 1200px ) {
+	.container {
+		width: 75%;
+	}
+}
+
+@media screen and ( max-width: 600px ) {
+	.container {
+		width: 90%;
+	}
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat( 8, 1fr );
+	justify-items: center;
+	align-items: center;
+	margin-top: 20px;
+	padding: 10px;
+	color: #FFF;
+	font: normal 18px "Consolas";
+	box-shadow: 0 0 10px #363636;
+}
+
+#name {
+	grid-area: 2 / 4 / 2 / 6;
+	width: calc( 100% - 10px );
+	height: 40px;
+	margin-top: 10px;
+	padding-left: 10px;
+	background-color: transparent;
+	color: #FFF;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 0 0 2px #363636 inset;
+	outline: none;
+}
+
+h1 {
+	grid-column: 1 / 9;
+	font: bold 40px "幼圆";
+}
+
+dl {
+	display: grid;
+	grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+	grid-column: 1 / 9;
+	width: 100%;
+	height: 80px;
+	margin-top: 10px;
+}
+
+dt {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	grid-area: 1 / 1 / 1 / 5;
+	font: bold 20px "幼圆";
+	text-align: left;
+}
+
+dd {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	grid-area: 2 / 1 / 2 / 5;
+	width: 100%;
+	height: 100%;
+}
+
+label {
+	font: normal 20px "Consolas";
+	cursor: pointer;
+}
+
+input[type='radio'] {
+	cursor: pointer;
+}
+
+#submit {
+	grid-column: 3 / 7;
+	width: 100%;
+	height: 50px;
+	background-color: #363636;
+	color: #FFF;
+	font: normal 18px "Consolas";
+	border: 0;
+	border-radius: 5px;
+	outline: none;
+	box-shadow: 0 0 0 2px #181818 inset;
+	cursor: pointer;
+	transition: all .1s ease 0s;
+}
+
+#submit:hover {
+	background-color: #FFF;
+	color: #000;
+}
